@@ -25,51 +25,51 @@
 					'', '', '&nbsp;', '', ''];
 	var shift 	= 	false;
 
-	$(document).keydown(function (e){
+	jQuery(document).keydown(function (e){
 		for(var i = 0 ; i < keys.length; i++){
 			if(e.keyCode  == keys[i]){
 				if(e.keyCode != 8 )
 					e.preventDefault();
 				switch(keys[i]) {
 					case 8:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:65px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:65px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					case 9:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:52px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:52px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					case 13:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:81px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:81px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					case 16:
 						if(xcord[i] == 113)
-							$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:79px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+							jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:79px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						else
-							$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:95px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+							jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:95px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					case 17:
 					case 18:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:42px;height:33px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:42px;height:33px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					case 20:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:59px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:59px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					case 32:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:378px;height:33px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:378px;height:33px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					case 220:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:53px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:53px;height:32px;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 						break;
 					default:
-						$(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:32px;height:auto;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
+						jQuery(".keyboard").append("<img class='overlay' src='images/overlay.jpg' style='width:32px;height:auto;position:absolute;left:"+xcord[i]+"px;top:"+ycord[i]+"px;opacity:1.0 '/>");
 				}
 				if(e.keyCode == 16)
 					shift = true;
 				if(e.keyCode != 16) {
 					if(e.keyCode == 8){}
 					else if(shift)
-						$('.output').append(upper[i]);
+						jQuery('.output').append(upper[i]);
 					else
-						$('.output').append(dvorak[i]);
+						jQuery('.output').append(dvorak[i]);
 				}
     			placeCaretAtEnd( document.getElementById("myout") );
 			}
@@ -77,11 +77,11 @@
 	});
 
 
-	$(document).keyup(function (e){
+	jQuery(document).keyup(function (e){
 			for(var i = 0 ; i < keys.length; i++){
 				if(e.keyCode == keys[i]){
 					setTimeout(function(){
-						$(".keyboard").children(".overlay").remove();
+						jQuery(".keyboard").children(".overlay").remove();
 					}, 130);
 				}
 				if(e.keyCode ==  16){
@@ -101,6 +101,6 @@
 	}
 
   	function clearDiv() {
-   		$('.output').empty();
+   		jQuery('.output').empty();
   	}
 
