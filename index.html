@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>The Dvorak Keyboard</title>
+
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="dvorak.js"></script>
+
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+        <h1 class="title">The Dvorak Keyboard</h1>
+    </div>
+    <div class="container">
+        <section class="header">
+
+            <div class="keyboard">
+        	   <img src='images/keyboard_layout.png' />
+        	</div>
+
+            <div id="myout" class="output" contenteditable="true" tabindex="1"></div>
+			
+			<a class="button button-primary" onClick="clearDiv()">Clear</a>
+
+        </section>
+  </div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>
